@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAILWAYS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div id="splash" class="screen">
+    <div class="railway-yard">
+        <img src="thumbnail.png" alt="Railway Splash">
+    </div>
+</div>
+
+
+<div id="menu" class="screen hidden">
+    <div class="main-section">
+        <h1 class="header">RAILWAYS</h1>
+
+        <label for="player-name"></label>
+        <input type="text" id="player-name" placeholder="WHO ARE YOU?">
+        <div id="error-message" class="error-message hidden"></div>
+
+        <div class="items-menu">
+            
+            <div class="game-difficulty">
+                <h2>Set the Difficulty!</h2>
+                <button id="easy-button">5x5 (Easy)</button>
+                <button id="hard-button">7x7 (Hard)</button>
+            </div>
+
+            
+            <div class="controls-panel">
+                <button id="rules">Rules</button>
+                <button id="start-game-btn">Start Game</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="railway-railway-yard">
+        <img src="menu_screen.png" alt="Railway railway-yard">
+    </div>
+</div>
+
+<div id="popup-backdrop"></div>
+<div id="rules-window" hidden>     
+    <h1>Game Rules & Description</h1>
+    <p><strong>Objective:</strong></p>
+    <p>Create a continuous circular railway line that connects all required tiles.</p>
+    
+    <p><strong>How to Play:</strong></p>
+    <ul>
+        <li><strong>Left Click:</strong> Place selected rail on a tile</li>
+        <li><strong>Right Click:</strong> Rotate placed rail 90° clockwise</li>
+        <li><strong>Mountains & Bridges:</strong> Must have rails placed on them</li>
+        <li><strong>Oases:</strong> Cannot have rails (trains must go around)</li>
+        <li><strong>Empty Tiles:</strong> Optional - use as needed for your route</li>
+    </ul>
+    
+    <p><strong>Rail Types:</strong></p>
+    <ul>
+        <li><strong>Straight Rail:</strong> For empty tiles (can be rotated)</li>
+        <li><strong>Curve Rail:</strong> For empty tiles (can be rotated)</li>
+        <li><strong>Bridge Rail:</strong> Only for bridge tiles</li>
+        <li><strong>Mountain Rail:</strong> Only for mountain tiles</li>
+    </ul>
+    
+    <p><strong>Win Condition:</strong></p>
+    <p>All rails must form one continuous loop with proper connections!</p>
+    <button id="back-to-menu">Back to Menu</button>
+</div>
+
+<div id="game-popup" hidden>
+    <div id="game-container">
+        
+        <div id="game-screen">
+            <canvas id="game-board" width="350" height="350"></canvas>
+        </div>
+
+      
+        <div id="rail-selector">
+            <h3 class="rail-selector-title">SELECT RAIL</h3>
+            <div class="rail-item">
+                <img src="straight_rail.png" data-rail="straight_rail" title="Straight Rail">
+                <span>Straight</span>
+            </div>
+            <div class="rail-item">
+                <img src="curve_rail.png" data-rail="curve_rail" title="Curve Rail">
+                <span>Curve</span>
+            </div>
+            <div class="rail-item">
+                <img src="bridge_rail.png" data-rail="bridge_rail" title="Bridge Rail">
+                <span>Bridge</span>
+            </div>
+            <div class="rail-item">
+                <img src="mountain_rail.png" data-rail="mountain_rail" title="Mountain Rail">
+                <span>Mountain</span>
+            </div>
+        </div>
+        
+       
+        <div class="game-info">
+            <div class="route-designer">
+                <p>ROUTE DESIGNER:</p>
+                <h2 id="player-name-display">[Player Name]</h2>
+            </div>
+            <div class="elapsed-time">
+                <p>ELAPSED TIME:</p>
+                <span id="elapsed-time">00:00</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-controls">
+        <button id="clear-board">Clear Board</button>
+        <button id="close-game">Back to Menu</button>
+    </div>
+</div>
+
+<div id="notification-box"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

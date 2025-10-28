@@ -1,0 +1,460 @@
+
+#menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+    transition: 0.5s ease-out;
+
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-size: 100px;
+    font-weight: 700;
+    color: #11d6e863;
+    text-align: center;
+    letter-spacing: 5px;
+    margin: 0;
+    padding: 20px 0;
+    text-shadow: 2px 2px #A78D47;
+}
+
+
+label {
+    font-size: 24px;
+    color: #b0a075;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#player-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+
+.items-menu {
+    display: flex;
+    gap: 20px; 
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.game-difficulty {
+    width: 700px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 3px solid #C8D0BC;
+    border-radius: 15px;
+
+}
+
+.game-difficulty h2 {
+    font-size: 1.3em;
+    color: #C8D0BC;
+    font-weight: bold;
+
+}
+
+.game-difficulty button {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.game-difficulty button:hover {
+    background-color: #d6d0bd;
+}
+
+
+.controls-panel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.controls-panel button {
+    display: block;
+    width: 100%;
+    height: 40%;
+    padding: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #7c7871; 
+    border: none;
+    border-radius: 10px;
+    margin: 0;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+#easy-button.selected, #hard-button.selected {
+    width: 120px;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 3px solid #919096;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #e7e8e8;
+    font-weight: bold;
+}
+
+.controls-panel button#start-game {
+    background-color: #EAEFD3;
+    border-color: #b5c0a4;
+    color: #50525f;
+}
+
+.controls-panel button:hover {
+    background-color: #6d685f; 
+}
+
+.controls-panel button#start-game:hover {
+    background-color: #998b64; 
+}
+
+
+.railway-yard-background {
+    width: 100%;
+    height: 80px;
+    background-image: url('railway-yard.png'); 
+    background-size: cover;
+    background-position: left; 
+    background-repeat: no-repeat;
+}
+
+
+#rules-window {
+    display: none; 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px; 
+    max-width: 90%; 
+    background-color: #ffffff; 
+    border: 2px solid #b5c0a4; 
+    border-radius: 16px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-out; 
+}
+
+
+#rules-window h2 {
+    font-size: 1.5em;
+    color: #D6B768;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px #A78D47;
+}
+
+
+#rules-window p {
+    font-size: 1em;
+    color: #50525f;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+
+#rules-window button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #e9eede;
+    color: #50525f;
+    border: 2px solid #b5bfa4;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#rules-window button:hover {
+    background-color: #6d685f; 
+    color: #ffffff;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+#popup-backdrop {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+}
+
+
+#game-popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; 
+    max-width: 800px;
+    width: 100%;
+}
+
+#game-board {
+    border: 5px solid #6c757d;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #fdf8e1, #f5e9c4);
+    width: 350px;
+    height: 350px;
+}
+
+#rail-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background-color: #fdfbf5;
+    border: 3px solid #d3c7a0;
+    border-radius: 12px;
+    width: 140px;
+}
+
+.rail-selector-title {
+    margin: 0 0 10px 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.rail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.rail-item:hover {
+    background-color: #f0e9d2;
+}
+
+.rail-item span {
+    font-size: 11px;
+    color: #6c757d;
+    font-weight: bold;
+    text-align: center;
+}
+
+#rail-selector img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 3px solid #d1e3e1;
+    border-radius: 8px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+#rail-selector img:hover {
+    transform: scale(1.1);
+    border-color: #78a1bb;
+}
+
+
+#game-popup h2 {
+    font-size: 36px;
+    color: #D6B768;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#game-popup p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+#game-popup button {
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #7c7871;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#game-popup button:hover {
+    background-color: #6d685f;
+}
+
+#game-popup[hidden] {
+    display: none;
+}
+
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    opacity: 1; 
+    transition: opacity 1.5s ease; 
+    z-index: 1;
+}
+
+
+.hidden {
+    opacity: 0; 
+    pointer-events: none; 
+}
+
+
+#menu {
+    z-index: 0;
+}
+
+.error-message {
+    color: rgb(255, 8, 0);
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+    display: none; 
+}
+
+.error-message.hidden {
+    display: none; 
+}
+
+.error-message:not(.hidden) {
+    display: block; 
+}
+
+
+
+.game-info {
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 200px;
+}
+
+.game-info .route-designer,
+.game-info .elapsed-time {
+    margin-bottom: 10px;
+}
+
+.game-info h2 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.game-info p {
+    font-weight: bold;
+    margin: 0;
+}
+
+#notification-box {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f44336;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    z-index: 10000;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.game-controls button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #7c7871;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.game-controls button:hover {
+    background-color: #6d685f;
+}
+
+#clear-board {
+    background-color: #e74c3c !important;
+}
+
+#clear-board:hover {
+    background-color: #c0392b !important;
+}
+
