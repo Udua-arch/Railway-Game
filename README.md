@@ -1,14 +1,5 @@
 # Railways - Route Designer Puzzle Game
 
-## Student Declaration
-
-I declare that this solution is my own work. I have not copied from any other student's work or from any other source except where due acknowledgment is made explicitly in the text, nor has any part been written for me by another person.
-
-**Student Name:** [Your Name Here]  
-**Date:** [Date]
-
----
-
 ## Game Description
 
 Railways is a logic puzzle game where players must create a continuous circular railway line on a grid. The objective is to connect all required terrain elements (mountains and bridges) while avoiding oases, forming a complete loop.
