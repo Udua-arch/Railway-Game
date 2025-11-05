@@ -75,7 +75,7 @@ Your goal: **connect all mountains and bridges** while avoiding oases — and fo
 
 **Mary Uduakobong Okon**  
 🎓 Computer Science Student | 💡 Passionate about Game Logic & Frontend Design  
-📧 mary02okon@gmail.com  
+📧 okonmary1502@gmail.com 
 🌍 [GitHub](https://github.com/Udua-arch) • [LinkedIn](https://www.linkedin.com/in/maryuduak/)  
 
 ---
